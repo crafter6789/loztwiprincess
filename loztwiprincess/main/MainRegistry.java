@@ -36,6 +36,7 @@ public class MainRegistry {
 	@EventHandler
 	public static void PreLoad(FMLPreInitializationEvent PreEvent){
 
+		DimensionRegistry.mainRegistry();
 		
 		MCreativeTabs.initializeTabs();
 		MItems.mainRegistry();
@@ -52,8 +53,8 @@ public class MainRegistry {
 	@EventHandler
 	public static void load(FMLInitializationEvent event){
 		//DimensionRegistry.mainRegistry();
-		DimensionRegistry.registerDimensions();
-		DimensionRegistry.registerWorldProvider();
+		//DimensionRegistry.registerDimensions();
+		//DimensionRegistry.registerWorldProvider();
 		
 	}
 	@EventHandler

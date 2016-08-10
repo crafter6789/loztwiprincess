@@ -23,5 +23,5 @@ public class RefStrings {
 	
 	public static final String CLIENTSIDE = "com.crafter6789.loztwiprincess.main.ClientProxy";
 	public static final String SERVERSIDE = "com.crafter6789.loztwiprincess.main.ServerProxy";
-	public static final int dimensionId = 128;
+	public static final int dimensionId = 7;
 }

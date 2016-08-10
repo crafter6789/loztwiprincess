@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.crafter6789.loztwiprincess.world.biome.BiomeRegistry;
 import com.crafter6789.loztwiprincess.world.biome.HyruleFieldGenLayerBiome;
 
 import net.minecraft.crash.CrashReport;
@@ -35,7 +36,7 @@ public class WorldChunkManagerTwilightPrincess extends WorldChunkManager {
 	{
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawnIn = new ArrayList();
-		this.biomesToSpawnIn.addAll(allowedBiomes);
+		this.biomesToSpawnIn.add(10, BiomeRegistry.biomeHyruleField);
 	}
 
 	public WorldChunkManagerTwilightPrincess(long seed, WorldType worldType)

@@ -54,14 +54,14 @@ public abstract class WorldProviderTwilightPrincess extends WorldProvider
     
     //TODO ???
     
-    /*public final void registerWorld(World p_76558_1_)
+    public final void registerWorld(World p_76558_1_)
     {
         this.worldObj = p_76558_1_;
         this.terrainType = p_76558_1_.getWorldInfo().getTerrainType();
         this.field_82913_c = p_76558_1_.getWorldInfo().getGeneratorOptions();
         this.registerWorldChunkManager();
         this.generateLightBrightnessTable();
-    }*/
+    }
 
     /**
      * Creates the light to brightness table

@@ -41,7 +41,6 @@ public class WorldChunkManagerTwilightPrincess extends WorldChunkManager {
 	public WorldChunkManagerTwilightPrincess(long seed, WorldType worldType)
 	{
 		this();
-		// i changed this to my GenLayerTutorial
 		GenLayer[] agenlayer = HyruleFieldGenLayerBiome.makeTheWorld(seed, worldType);
 		agenlayer = getModdedBiomeGenerators(worldType, seed, agenlayer);
 		this.genBiomes = agenlayer[0];

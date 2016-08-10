@@ -136,7 +136,6 @@ public class HyruleFieldGenLayerBiome extends GenLayer
     }
 
 	public static GenLayer[] makeTheWorld(long seed, WorldType worldType) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

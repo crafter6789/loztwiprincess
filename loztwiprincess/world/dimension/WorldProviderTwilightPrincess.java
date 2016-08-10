@@ -27,7 +27,7 @@ import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.client.IRenderHandler;
 import net.minecraftforge.common.DimensionManager;
 
-public abstract class WorldProviderTwilightPrincess extends WorldProvider
+public class WorldProviderTwilightPrincess extends WorldProvider
 {
     public static final float[] moonPhaseFactors = new float[] {1.0F, 0.75F, 0.5F, 0.25F, 0.0F, 0.25F, 0.5F, 0.75F};
     /** world object being used */
@@ -35,7 +35,7 @@ public abstract class WorldProviderTwilightPrincess extends WorldProvider
     public WorldType terrainType;
     public String field_82913_c;
     /** World chunk manager being used to generate chunks */
-    public WorldChunkManager worldChunkMgr;
+    public WorldChunkManagerTwilightPrincess worldChunkMgr;
     /** States whether the Hell world provider is used(true) or if the normal world provider is used(false) */
     public boolean isHellWorld;
     /** A boolean that tells if a world does not have a sky. Used in calculating weather and skylight */
@@ -54,14 +54,14 @@ public abstract class WorldProviderTwilightPrincess extends WorldProvider
     
     //TODO ???
     
-    public final void registerWorld(World p_76558_1_)
+    /*public final void registerWorld(World p_76558_1_)
     {
         this.worldObj = p_76558_1_;
         this.terrainType = p_76558_1_.getWorldInfo().getTerrainType();
         this.field_82913_c = p_76558_1_.getWorldInfo().getGeneratorOptions();
         this.registerWorldChunkManager();
         this.generateLightBrightnessTable();
-    }
+    }*/
 
     /**
      * Creates the light to brightness table
@@ -82,7 +82,7 @@ public abstract class WorldProviderTwilightPrincess extends WorldProvider
      */
     protected void registerWorldChunkManager()
     {
-        this.worldChunkMgr = terrainType.getChunkManager(worldObj);
+        this.worldChunkMgr = (WorldChunkManagerTwilightPrincess) terrainType.getChunkManager(worldObj);
     }
 
     /**
@@ -266,7 +266,9 @@ public abstract class WorldProviderTwilightPrincess extends WorldProvider
     /**
      * Returns the dimension's name, e.g. "The End", "Nether", or "Overworld".
      */
-    public abstract String getDimensionName();
+    public String getDimensionName() {
+		return null;
+	}
 
     /*======================================= Forge Start =========================================*/
     private IRenderHandler skyRenderer = null;

@@ -8,8 +8,14 @@ import net.minecraft.world.gen.layer.GenLayerZoom;
 
 public class WorldTypeTwilightPrincess extends WorldType{
 	
-	public WorldTypeTwilightPrincess(int par1, String name){
+	public final int generatorVersion;
+	public final int worldType;
+
+
+	public WorldTypeTwilightPrincess(int par1, String name, int genver){
 		super(name);
+		this.worldType = par1;
+	    this.generatorVersion = genver;
 	}
 	
 	

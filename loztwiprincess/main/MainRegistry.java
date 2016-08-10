@@ -60,7 +60,7 @@ public class MainRegistry {
 	@EventHandler
 	public static void PostLoad(FMLPostInitializationEvent PostEvent){
 		
-		WorldType TWILIGHTPRINCESS = new WorldTypeTwilightPrincess(3, "twilightprincess");
+		WorldType TWILIGHTPRINCESS = new WorldTypeTwilightPrincess(3, "twilightprincess", 0);
 		
 	}
 }

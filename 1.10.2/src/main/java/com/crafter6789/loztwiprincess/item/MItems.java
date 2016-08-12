@@ -9,6 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -35,14 +36,14 @@ public class MItems {
 	public static ToolMaterial WoodShieldToolMaterial = EnumHelper.addToolMaterial("WoodShieldToolMaterial", 1, 130, 0.5f, -4.0f, 10);	
 	public static ToolMaterial HylianShieldToolMaterial = EnumHelper.addToolMaterial("HylianShieldToolMaterial", 4, -1, 0.5f, -4.0f, 23);	
 	
-	public static ArmorMaterial HyrlNormArmorMaterial = EnumHelper.addArmorMaterial("HyrlNormArmorMaterial", null, 19, new int[]{3, 5, 4, 3}, 12, null, 0);
-	public static ArmorMaterial HyrlChanArmorMaterial = EnumHelper.addArmorMaterial("HyrlChanArmorMaterial", null, 19, new int[]{3, 5, 4, 3}, 12, null, 0);
-	public static ArmorMaterial ShdwNormArmorMaterial = EnumHelper.addArmorMaterial("ShdwNormArmorMaterial", null, 19, new int[]{3, 5, 4, 3}, 12, null, 0);
+	public static ArmorMaterial HyrlNormArmorMaterial = EnumHelper.addArmorMaterial("HyrlNormArmorMaterial", null, 19, new int[]{3, 5, 4, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0);
+	public static ArmorMaterial HyrlChanArmorMaterial = EnumHelper.addArmorMaterial("HyrlChanArmorMaterial", null, 19, new int[]{3, 5, 4, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 0);
+	public static ArmorMaterial ShdwNormArmorMaterial = EnumHelper.addArmorMaterial("ShdwNormArmorMaterial", null, 19, new int[]{3, 5, 4, 3}, 12, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0);
 	
-	public static ArmorMaterial GoranTunicMaterial = EnumHelper.addArmorMaterial("GoranTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, null, 0);
-	public static ArmorMaterial HeroTunicMaterial = EnumHelper.addArmorMaterial("HeroTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, null, 0);
-	public static ArmorMaterial ZoraTunicMaterial = EnumHelper.addArmorMaterial("ZoraTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, null /*new SoundEvent(new ResourceLocation("item.armor.equip_iron"))*/, 0);
-													//TODO replace first 'null' with: (RefStrings.MODID + ":textures/model/armor/" + getUnlocalizedName(stack).substring(5, 13))
+	public static ArmorMaterial GoranTunicMaterial = EnumHelper.addArmorMaterial("GoranTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+	public static ArmorMaterial HeroTunicMaterial = EnumHelper.addArmorMaterial("HeroTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+	public static ArmorMaterial ZoraTunicMaterial = EnumHelper.addArmorMaterial("ZoraTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+													//TODO replace first 'null' with something like this maybe?: (RefStrings.MODID + ":textures/model/armor/" + getUnlocalizedName(stack).substring(5, 13))
 
 	//Miscellaneous
 	public static Item MasterSword;
@@ -193,11 +194,7 @@ public class MItems {
 
 	public static void registerItem(){
 		
-		for(;;){
-			
-		}
-		
-		
+		//TODO GameRegistry.register(itemName, resourceLocation);
 		//Miscellaneous
 		GameRegistry.registerItem(ChuJellyRed, ChuJellyRed.getUnlocalizedName());
 		GameRegistry.registerItem(ChuJellyGreen, ChuJellyGreen.getUnlocalizedName());

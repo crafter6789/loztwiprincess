@@ -5,11 +5,11 @@ import java.util.List;
 import com.crafter6789.loztwiprincess.creativeTabs.MCreativeTabs;
 import com.crafter6789.loztwiprincess.lib.RefStrings;
 
-import net.minecraft.client.renderer.texture.IIconRegister;
+//import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
+//import net.minecraft.util.IIcon;
 
 public class Rupee extends Item {
 	
@@ -20,9 +20,10 @@ public class Rupee extends Item {
 		this.setUnlocalizedName(name);
 		this.setCreativeTab(MCreativeTabs.tabItem);
 		this.setHasSubtypes(true);
+		//this.setMaxDamage(maxnum or 0);
 		
 	}
-	public IIcon[] icons = new IIcon[maxnum];
+/*	public IIcon[] icons = new IIcon[maxnum];
 
 	@Override
 	public void registerIcons(IIconRegister reg) {
@@ -36,7 +37,7 @@ public class Rupee extends Item {
 	        meta = 0;
 
 	    return this.icons[meta];
-	}
+	}*/
 
 	@Override
 	public void getSubItems(Item item, CreativeTabs tab, List list) {

@@ -39,7 +39,7 @@ public class ModOre implements IWorldGenerator {
 			int yPos = minY + random.nextInt(maxY - minY);
 			int zPos = posZ + random.nextInt(defaultChunkSize);
 			
-			new WorldGenMinable(block, (minVein + random.nextInt(maxVein - minVein)), blockspawn).generate(world, random, xPos, yPos, zPos);
+			//TODO wth??? was: new WorldGenMinable(block, (minVein + random.nextInt(maxVein - minVein)), blockspawn).generate(world, random, xPos, yPos, zPos);
 		}
 	}
 

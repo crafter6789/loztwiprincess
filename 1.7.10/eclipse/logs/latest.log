@@ -1,0 +1,61 @@
+[01:21:49] [main/INFO]: Setting user: Player197
+[01:21:55] [Client thread/INFO]: LWJGL Version: 2.9.1
+[01:22:20] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Legend of Zelda Twilight Princess Mod
+[01:22:23] [Sound Library Loader/INFO]: Sound engine started
+[01:22:34] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[01:22:34] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[01:22:35] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Legend of Zelda Twilight Princess Mod
+[01:22:39] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[01:22:41] [Client thread/INFO]: Created: 512x256 textures/items-atlas
+[01:22:42] [Sound Library Loader/INFO]: Sound engine started
+[01:29:29] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[01:29:29] [Server thread/INFO]: Generating keypair
+[01:29:29] [Server thread/INFO]: Converting map!
+[01:29:29] [Server thread/INFO]: Scanning folders...
+[01:29:29] [Server thread/INFO]: Total conversion count is 0
+[01:29:32] [Server thread/INFO]: Preparing start region for level 0
+[01:29:33] [Server thread/INFO]: Preparing spawn area: 3%
+[01:29:34] [Server thread/INFO]: Preparing spawn area: 8%
+[01:29:35] [Server thread/INFO]: Preparing spawn area: 14%
+[01:29:36] [Server thread/INFO]: Preparing spawn area: 20%
+[01:29:37] [Server thread/INFO]: Preparing spawn area: 28%
+[01:29:39] [Server thread/INFO]: Preparing spawn area: 35%
+[01:29:40] [Server thread/INFO]: Preparing spawn area: 43%
+[01:29:41] [Server thread/INFO]: Preparing spawn area: 49%
+[01:29:42] [Server thread/INFO]: Preparing spawn area: 56%
+[01:29:43] [Server thread/INFO]: Preparing spawn area: 62%
+[01:29:44] [Server thread/INFO]: Preparing spawn area: 70%
+[01:29:45] [Server thread/INFO]: Preparing spawn area: 77%
+[01:29:46] [Server thread/INFO]: Preparing spawn area: 84%
+[01:29:47] [Server thread/INFO]: Preparing spawn area: 88%
+[01:29:48] [Server thread/INFO]: Preparing spawn area: 94%
+[01:29:49] [Server thread/INFO]: Changing view distance to 2, from 10
+[01:29:51] [Server thread/INFO]: Player197[local:E:083ca565] logged in with entity id 165 at (-124.5, 71.0, 244.5)
+[01:29:51] [Server thread/INFO]: Player197 joined the game
+[01:29:55] [Client thread/INFO]: Warning: Clientside chunk ticking took 175 ms
+[01:29:55] [Client thread/INFO]: Warning: Clientside chunk ticking took 186 ms
+[01:29:55] [Client thread/INFO]: Warning: Clientside chunk ticking took 144 ms
+[01:29:55] [Client thread/INFO]: Warning: Clientside chunk ticking took 170 ms
+[01:29:56] [Client thread/INFO]: Warning: Clientside chunk ticking took 207 ms
+[01:29:56] [Client thread/INFO]: Warning: Clientside chunk ticking took 179 ms
+[01:29:56] [Client thread/INFO]: Warning: Clientside chunk ticking took 164 ms
+[01:29:57] [Client thread/INFO]: Warning: Clientside chunk ticking took 195 ms
+[01:30:10] [Server thread/INFO]: Player197 has just earned the achievement [Taking Inventory]
+[01:30:10] [Client thread/INFO]: [CHAT] Player197 has just earned the achievement [Taking Inventory]
+[01:30:36] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 8605ms behind, skipping 172 tick(s)
+[01:30:37] [Client thread/INFO]: Warning: Clientside chunk ticking took 148 ms
+[01:30:38] [Client thread/INFO]: Warning: Clientside chunk ticking took 103 ms
+[01:30:38] [Client thread/INFO]: Warning: Clientside chunk ticking took 102 ms
+[01:31:55] [Server thread/INFO]: Saving and pausing game...
+[01:31:55] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/Overworld
+[01:31:55] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/Nether
+[01:31:55] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/The End
+[01:31:55] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/Hyrule
+[01:31:55] [Server thread/INFO]: Stopping server
+[01:31:55] [Server thread/INFO]: Saving players
+[01:31:55] [Server thread/INFO]: Saving worlds
+[01:31:55] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/Overworld
+[01:31:56] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/Nether
+[01:31:56] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/The End
+[01:31:56] [Server thread/INFO]: Saving chunks for level 'New Worldtttttttttttttt'/Hyrule
+[01:31:58] [Client thread/INFO]: Stopping!

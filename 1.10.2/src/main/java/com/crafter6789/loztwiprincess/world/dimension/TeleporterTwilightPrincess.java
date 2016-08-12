@@ -4,6 +4,9 @@ import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectIterator;
 import java.util.Random;
+
+import com.crafter6789.loztwiprincess.blocks.MBlocksClass;
+
 import net.minecraft.block.BlockPortal;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockPattern;
@@ -57,7 +60,7 @@ public class TeleporterTwilightPrincess
                         int j2 = j + l1;
                         int k2 = k + k1 * 0 - j1 * 1;
                         boolean flag = l1 < 0;
-                        this.worldServerInstance.setBlockState(new BlockPos(i2, j2, k2), flag ? Blocks.OBSIDIAN.getDefaultState() : Blocks.AIR.getDefaultState());
+                        this.worldServerInstance.setBlockState(new BlockPos(i2, j2, k2), flag ? MBlocksClass.TwiHyrulePortalSupport.getDefaultState() : Blocks.AIR.getDefaultState());
                     }
                 }
             }
@@ -101,9 +104,9 @@ public class TeleporterTwilightPrincess
                     {
                         blockpos2 = blockpos1.down();
 
-                        if (this.worldServerInstance.getBlockState(blockpos1).getBlock() == Blocks.PORTAL)
+                        if (this.worldServerInstance.getBlockState(blockpos1).getBlock() == MBlocksClass.TwiHyrulePortal)
                         {
-                            for (blockpos2 = blockpos1.down(); this.worldServerInstance.getBlockState(blockpos2).getBlock() == Blocks.PORTAL; blockpos2 = blockpos2.down())
+                            for (blockpos2 = blockpos1.down(); this.worldServerInstance.getBlockState(blockpos2).getBlock() == MBlocksClass.TwiHyrulePortal; blockpos2 = blockpos2.down())
                             {
                                 blockpos1 = blockpos2;
                             }
@@ -130,7 +133,7 @@ public class TeleporterTwilightPrincess
 
             double d5 = (double)blockpos.getX() + 0.5D;
             double d7 = (double)blockpos.getZ() + 0.5D;
-            BlockPattern.PatternHelper blockpattern$patternhelper = Blocks.PORTAL.createPatternHelper(this.worldServerInstance, blockpos);
+            BlockPattern.PatternHelper blockpattern$patternhelper = ((BlockPortal) MBlocksClass.TwiHyrulePortal).createPatternHelper(this.worldServerInstance, blockpos);
             boolean flag1 = blockpattern$patternhelper.getForwards().rotateY().getAxisDirection() == EnumFacing.AxisDirection.NEGATIVE;
             double d2 = blockpattern$patternhelper.getForwards().getAxis() == EnumFacing.Axis.X ? (double)blockpattern$patternhelper.getFrontTopLeft().getZ() : (double)blockpattern$patternhelper.getFrontTopLeft().getX();
             double d6 = (double)(blockpattern$patternhelper.getFrontTopLeft().getY() + 1) - entityIn.getLastPortalVec().yCoord * (double)blockpattern$patternhelper.getHeight();
@@ -363,13 +366,13 @@ public class TeleporterTwilightPrincess
                         int k10 = k2 + k8;
                         int k11 = k6 + (l7 - 1) * i3 - j7 * l6;
                         boolean flag = k8 < 0;
-                        this.worldServerInstance.setBlockState(new BlockPos(k9, k10, k11), flag ? Blocks.OBSIDIAN.getDefaultState() : Blocks.AIR.getDefaultState());
+                        this.worldServerInstance.setBlockState(new BlockPos(k9, k10, k11), flag ? MBlocksClass.TwiHyrulePortalSupport.getDefaultState() : Blocks.AIR.getDefaultState());
                     }
                 }
             }
         }
 
-        IBlockState iblockstate = Blocks.PORTAL.getDefaultState().withProperty(BlockPortal.AXIS, l6 == 0 ? EnumFacing.Axis.Z : EnumFacing.Axis.X);
+        IBlockState iblockstate = MBlocksClass.TwiHyrulePortal.getDefaultState().withProperty(BlockPortal.AXIS, l6 == 0 ? EnumFacing.Axis.Z : EnumFacing.Axis.X);
 
         for (int i8 = 0; i8 < 4; ++i8)
         {
@@ -381,7 +384,7 @@ public class TeleporterTwilightPrincess
                     int l11 = k2 + l9;
                     int k12 = k6 + (l8 - 1) * i3;
                     boolean flag1 = l8 == 0 || l8 == 3 || l9 == -1 || l9 == 3;
-                    this.worldServerInstance.setBlockState(new BlockPos(l10, l11, k12), flag1 ? Blocks.OBSIDIAN.getDefaultState() : iblockstate, 2);
+                    this.worldServerInstance.setBlockState(new BlockPos(l10, l11, k12), flag1 ? MBlocksClass.TwiHyrulePortalSupport.getDefaultState() : iblockstate, 2);
                 }
             }
 

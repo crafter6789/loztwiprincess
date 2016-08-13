@@ -8,8 +8,8 @@ import net.minecraft.block.BlockLog;
 
 public class MLog extends BlockLog {
 	public MLog(String name){
-		this.setBlockName(name);
+		//this.setBlockName(name);
 		this.setCreativeTab(MCreativeTabs.tabBlock);
-		this.setBlockTextureName(RefStrings.MODID + ":" + name);
+		//this.setBlockTextureName(RefStrings.MODID + ":" + name);
 		}
 }

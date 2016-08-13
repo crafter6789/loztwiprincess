@@ -8,8 +8,8 @@ import net.minecraft.block.material.Material;
 
 public class MSapling extends BlockSapling {
 	public MSapling(String name) {
-		this.setBlockName(name);
+		//this.setBlockName(name);
 		this.setCreativeTab(MCreativeTabs.tabBlock);
-		this.setBlockTextureName(RefStrings.MODID + ":" + name);
+		//this.setBlockTextureName(RefStrings.MODID + ":" + name);
 	}
 }

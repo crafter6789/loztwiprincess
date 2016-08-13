@@ -7,9 +7,10 @@ import com.crafter6789.loztwiprincess.world.ModOre;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 
-public class MOre extends Block{
+public class MOre extends Block {
 
 	private Item drop;
 	private int meta;
@@ -41,20 +42,20 @@ public class MOre extends Block{
 		
 	}
 	@Override
-	public Item getItemDropped(int meta, Random random, int fortune) {
+	public Item getItemDropped(IBlockState meta, Random random, int fortune) {
 	    return this.drop;
 	}
 
 	@Override
-	public int damageDropped(int metadata) {
+	public int damageDropped(IBlockState metadata) {
 	    return this.meta;
 	}
 
 	@Override
-	public int quantityDropped(int meta, int fortune, Random random) {
+	public int quantityDropped(Random random) {
 	    if (this.least_quantity >= this.most_quantity)
 	        return this.least_quantity;
-	    return this.least_quantity + random.nextInt(this.most_quantity - this.least_quantity + fortune + 1);
+	    return this.least_quantity + random.nextInt(this.most_quantity - this.least_quantity + 1);
 	}
 
 }

@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 public class SwordStand extends BlockContainer {
 
 	public SwordStand() {
-        super(Material.iron);
+        super(Material.IRON);
         this.setHardness(2.0f);
         this.setResistance(6.0f);
         this.setHarvestLevel("pickaxe", 2);

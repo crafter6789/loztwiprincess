@@ -83,7 +83,7 @@ public class CraftingManager {
 	}
 	public static void addSmeltingRec(){
 		GameRegistry.addSmelting(MBlocksClass.AgOre, new ItemStack(MItems.AgIngot, 1), 20.0f);
-		GameRegistry.addSmelting(MBlocksClass.MasterOre, new ItemStack(MItems.MasterIngot, 1), 200.0f);
+		//GameRegistry.addSmelting(MBlocksClass.MasterOre, new ItemStack(MItems.MasterIngot, 1), 20.0f);
 		GameRegistry.addSmelting(Blocks.STONE,  new ItemStack(MItems.RockSteak, 1), 10.0f);
 	}
 }

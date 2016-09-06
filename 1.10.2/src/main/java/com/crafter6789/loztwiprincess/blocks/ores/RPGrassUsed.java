@@ -6,6 +6,7 @@ import java.util.Random;
 import com.crafter6789.loztwiprincess.blocks.MBlocksClass;
 import com.crafter6789.loztwiprincess.creativeTabs.MCreativeTabs;
 import com.crafter6789.loztwiprincess.item.MItems;
+import com.crafter6789.loztwiprincess.lib.RefStrings;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
@@ -29,6 +30,8 @@ public class RPGrassUsed extends BlockBush {
         this.setTickRandomly(true);
         this.setBlockUnbreakable();
         this.blockSoundType = SoundType.PLANT;
+        this.setRegistryName(RefStrings.MODID + ":RPGrassUsed");
+        this.setUnlocalizedName(this.getRegistryName().toString());
 	}
 	
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)

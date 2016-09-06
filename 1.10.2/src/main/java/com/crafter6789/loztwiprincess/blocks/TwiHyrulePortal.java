@@ -1,5 +1,6 @@
 package com.crafter6789.loztwiprincess.blocks;
 
+import com.crafter6789.loztwiprincess.lib.RefStrings;
 import com.google.common.cache.LoadingCache;
 import java.util.Random;
 import javax.annotation.Nullable;
@@ -44,6 +45,7 @@ public class TwiHyrulePortal extends BlockBreakable
         super(Material.PORTAL, false);
         this.setDefaultState(this.blockState.getBaseState().withProperty(AXIS, EnumFacing.Axis.X));
         this.setTickRandomly(true);
+        this.setRegistryName(RefStrings.MODID + ":TwiHyrulePortal");
     }
 
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)

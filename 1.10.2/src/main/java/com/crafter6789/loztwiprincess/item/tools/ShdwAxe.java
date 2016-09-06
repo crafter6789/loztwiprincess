@@ -4,8 +4,11 @@ import net.minecraft.item.ItemAxe;
 
 public class ShdwAxe extends ItemAxe{
 
+	private static float damage = 10.0f;
+	private static float speed = 10.0F;
+
 	public ShdwAxe(ToolMaterial material) {
-		super(material);
+		super(material, damage, speed);
 	}
 
 }

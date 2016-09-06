@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.crafter6789.loztwiprincess.item.MItems;
+import com.crafter6789.loztwiprincess.lib.RefStrings;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -20,6 +22,8 @@ public class RupeeOre extends Block {
 		this.setHardness(5.0f);
 		this.setResistance(4.0f);
 		this.setHarvestLevel("pickaxe", 2);
+		this.setRegistryName(RefStrings.MODID + ":oreRupee");
+		this.setUnlocalizedName(this.getRegistryName().toString());
     }
     public List<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
         List<ItemStack> drops = new ArrayList<ItemStack>();

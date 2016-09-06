@@ -12,6 +12,7 @@ public class MBlocksStone extends Block{
 		this.setHardness(hard);
 		this.setResistance(resist);
 		this.setHarvestLevel(tool, HLVL);
+		//this.setUnlocalizedName(this.getRegistryName().toString());
 	}
 
 }

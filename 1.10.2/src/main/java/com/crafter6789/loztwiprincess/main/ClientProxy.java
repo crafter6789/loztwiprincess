@@ -11,12 +11,15 @@ import com.crafter6789.loztwiprincess.entity.render.RenderEntityChuGreen;
 import com.crafter6789.loztwiprincess.entity.render.RenderEntityChuPurple;
 import com.crafter6789.loztwiprincess.entity.render.RenderEntityChuRed;
 import com.crafter6789.loztwiprincess.entity.render.RenderEntityChuYellow;
+import com.crafter6789.loztwiprincess.item.MItems;
 
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraft.client.model.ModelBase;
 
 public class ClientProxy extends ServerProxy{
 	public void registerRenderInfo(){
+		MItems.render();
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntityChuRed.class, new RenderEntityChuRed(new ModelEntityChu(), 0F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityChuGreen.class, new RenderEntityChuGreen(new ModelEntityChu(), 0F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityChuBlue.class, new RenderEntityChuBlue(new ModelEntityChu(), 0F));

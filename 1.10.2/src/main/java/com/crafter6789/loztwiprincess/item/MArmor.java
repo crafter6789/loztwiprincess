@@ -8,6 +8,7 @@ import com.crafter6789.loztwiprincess.lib.RefStrings;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
@@ -34,6 +35,10 @@ public class MArmor extends ItemArmor {
 			return null;
 		}
 		
+	}
+	public Item setRegistryName() {
+		// TODO Auto-generated method stub
+		return this.setRegistryName(this.getUnlocalizedName());
 	}
 	
 }

@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.crafter6789.loztwiprincess.blocks.MBlocksClass;
 import com.crafter6789.loztwiprincess.item.MItems;
+import com.crafter6789.loztwiprincess.lib.RefStrings;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.SoundType;
@@ -30,6 +32,8 @@ public class RPGrass extends BlockBush {
         float f = 0.4F;
         //this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
         this.blockSoundType = SoundType.PLANT;
+        this.setRegistryName(RefStrings.MODID + ":RPGrass");
+        this.setUnlocalizedName(this.getRegistryName().toString());
     }
     
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)

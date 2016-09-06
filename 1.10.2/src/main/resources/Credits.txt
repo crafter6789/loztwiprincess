@@ -1,3 +1,4 @@
-crafter6789 -- main mod author
-e_0_s -- supplied many textures
-reddieeddie, cieszynski -- feedback and testing
+crafter6789					-- main author
+AnimeFan8888				-- helped porting to 1.10.2, bugfixing
+e_0_s						-- supplied many textures
+reddieeddie, cieszynski		-- feedback and testing

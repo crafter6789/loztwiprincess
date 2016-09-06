@@ -13,7 +13,7 @@ public class CreativeTabTool extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return MItems.HyrlPick;
+		return MItems.ITEMS.get("HyrlPick");
 	}
 
 }

@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 public class EntityChuRed extends EntityChu {
 
 	public EntityChuRed(World par1world) {
-		super(par1world, MItems.ChuJellyRed);
+		super(par1world, MItems.ITEMS.get("ChuJellyRed"));
 	}
 
 }

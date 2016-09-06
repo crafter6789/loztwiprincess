@@ -13,7 +13,7 @@ public class CreativeTabItem extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return MItems.ShdwIngot;
+		return MItems.ITEMS.get("ShdwIngot");
 	}
 
 }

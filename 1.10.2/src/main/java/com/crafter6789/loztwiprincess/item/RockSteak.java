@@ -16,7 +16,10 @@ public class RockSteak extends ItemFood {
 
 	public RockSteak(int par1, int par2, Boolean boolean3, String name) {
 		super(par1, par2, boolean3);
-		this.setUnlocalizedName("RockSteak");
+		this.setRegistryName(name);
+		this.setUnlocalizedName(name);
+		MItems.ITEMS.put(name, this);
+
 		//this.setTextureName(RefStrings.MODID + ":RockSteak");
 		
 	}

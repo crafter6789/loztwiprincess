@@ -13,7 +13,7 @@ public class CreativeTabArmour extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return MItems.HyrlNormChest;
+		return MItems.ITEMS.get("HyrlNormChest");
 	}
 
 }

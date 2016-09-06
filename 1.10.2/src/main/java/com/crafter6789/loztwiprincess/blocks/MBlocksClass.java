@@ -1,20 +1,16 @@
 package com.crafter6789.loztwiprincess.blocks;
 
-import com.crafter6789.loztwiprincess.blocks.MSapling;
-import com.crafter6789.loztwiprincess.blocks.MLeaves;
-import com.crafter6789.loztwiprincess.blocks.MLog;
 import com.crafter6789.loztwiprincess.blocks.ores.RPGrass;
 import com.crafter6789.loztwiprincess.blocks.ores.RPGrassUsed;
 import com.crafter6789.loztwiprincess.blocks.ores.RupeeOre;
-import com.crafter6789.loztwiprincess.item.MItems;
 import com.crafter6789.loztwiprincess.creativeTabs.MCreativeTabs;
+import com.crafter6789.loztwiprincess.item.MItems;
 import com.crafter6789.loztwiprincess.lib.RefStrings;
 
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MBlocksClass {
 	public static void mainRegistry(){
@@ -48,22 +44,22 @@ public class MBlocksClass {
 		
 		//Steel
 		
-		ShdwSteel = new MBlocksStone(Material.IRON, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock).setRegistryName(RefStrings.MODID + ":ShdwBlock");
-		FeSteel = new MBlocksStone(Material.IRON, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock).setRegistryName(RefStrings.MODID + ":FeBlock");
-		HyrlSteel = new MBlocksStone(Material.IRON, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock).setRegistryName(RefStrings.MODID + ":HyrlBlock");
-		Ag = new MBlocksStone(Material.IRON, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock).setRegistryName(RefStrings.MODID + ":AgBlock");
+		ShdwSteel = new MBlock("ShdwSteel", Material.IRON, SoundType.METAL, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock);
+		FeSteel = new MBlock("FeSteel", Material.IRON, SoundType.METAL, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock);
+		HyrlSteel = new MBlock("HyrlSteel", Material.IRON, SoundType.METAL, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock);
+		Ag = new MBlock("Ag", Material.IRON, SoundType.METAL, 5.0f, 5.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock);
 		
 		//Ore
 		
-		ShdwOre = new MOre("SOre", Material.ROCK, MItems.ShdwGem, 0, 1, 1).setHardness(5.0f).setResistance(5.0f)/*.setBlockName("ShdwOre")*/.setCreativeTab(MCreativeTabs.tabBlock).setRegistryName(RefStrings.MODID + ":oreShadow");
-		AgOre = new MBlocksStone(Material.ROCK, 5.0f, 4.0f, "pickaxe", 0)/*.setBlockName("AgOre")*/.setCreativeTab(MCreativeTabs.tabBlock).setRegistryName(RefStrings.MODID + ":oreAg");
-		MasterOre = new MBlocksStone(Material.ROCK, 20.0f, 40.0f, "pickaxe", 3)/*.setBlockName("MasterOre")*/.setCreativeTab(MCreativeTabs.tabBlock).setRegistryName(RefStrings.MODID + ":oreMaster");
-		RupeeOre = new RupeeOre("RupeeOre", Material.ROCK)/*.setBlockName("RupeeOre")*/.setCreativeTab(MCreativeTabs.tabBlock);
+		ShdwOre = new MOre("SOre", Material.ROCK, MItems.ITEMS.get("ShdwGem"), 0, 1, 5.0F, 4.0F, 1).setHardness(5.0f).setResistance(5.0f).setCreativeTab(MCreativeTabs.tabBlock);
+		AgOre = new MBlock("AgOre", Material.ROCK, SoundType.STONE, 5.0f, 4.0f, "pickaxe", 0).setCreativeTab(MCreativeTabs.tabBlock);
+		MasterOre = new MBlock("MasterOre", Material.ROCK, SoundType.STONE, 20.0f, 40.0f, "pickaxe", 3).setCreativeTab(MCreativeTabs.tabBlock);
+		RupeeOre = new RupeeOre("RupeeOre", Material.ROCK).setCreativeTab(MCreativeTabs.tabBlock);
 		
 		//Rupee Grass
 		
-		RPGrass = new RPGrass("RPGrass", Material.PLANTS)/*.setBlockName("RPGrass")*/.setCreativeTab(MCreativeTabs.tabItem);
-		RPGrassUsed = new RPGrassUsed("RPGrassUsed", Material.PLANTS)/*.setBlockName("RPGrassUsed")*/.setCreativeTab(MCreativeTabs.tabUtil);
+		RPGrass = new RPGrass("RPGrass", Material.PLANTS).setCreativeTab(MCreativeTabs.tabItem);
+		RPGrassUsed = new RPGrassUsed("RPGrassUsed", Material.PLANTS).setCreativeTab(MCreativeTabs.tabUtil);
 		
 		//Portal
 		

@@ -27,17 +27,17 @@ public class RupeeOre extends Block {
     }
     public List<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
         List<ItemStack> drops = new ArrayList<ItemStack>();
-        drops.add(new ItemStack(MItems.Rupee, world.rand.nextInt(4) + 3, 0));
-        drops.add(new ItemStack(MItems.Rupee, world.rand.nextInt(4) + 2, 1));
-        drops.add(new ItemStack(MItems.Rupee, world.rand.nextInt(3) + 1, 2));
+        drops.add(new ItemStack(MItems.ITEMS.get("Rupee"), world.rand.nextInt(4) + 3, 0));
+        drops.add(new ItemStack(MItems.ITEMS.get("Rupee"), world.rand.nextInt(4) + 2, 1));
+        drops.add(new ItemStack(MItems.ITEMS.get("Rupee"), world.rand.nextInt(3) + 1, 2));
 
         if (world.rand.nextFloat() < 0.02F)
         	{
-            drops.add(new ItemStack(MItems.Rupee, world.rand.nextInt(2), 3));
+            drops.add(new ItemStack(MItems.ITEMS.get("Rupee"), world.rand.nextInt(2), 3));
             }
         if (world.rand.nextFloat() < 0.02F)
             {
-        	drops.add(new ItemStack(MItems.Rupee, world.rand.nextInt(3), 4));
+        	drops.add(new ItemStack(MItems.ITEMS.get("Rupee"), world.rand.nextInt(3), 4));
             }
         	
         return drops;

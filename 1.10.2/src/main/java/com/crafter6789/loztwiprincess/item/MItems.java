@@ -4,33 +4,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.crafter6789.loztwiprincess.creativeTabs.MCreativeTabs;
-import com.crafter6789.loztwiprincess.lib.RefStrings;
+import com.crafter6789.loztwiprincess.item.meta.Rupee;
 
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.event.sound.SoundEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MItems {
 
-	//public static Map<String, Item> ITEMS = new HashMap<String, Item>();
+	public static Map<String, Item> ITEMS = new HashMap<String, Item>();
 
 	public static void mainRegistry(){
-		initializeItem();
-		registerItem();
+		initializeItems();
+		registerItems();
+		renderItems();
 	}
 	
 	//ToolArmorMaterial
@@ -48,117 +41,125 @@ public class MItems {
 	public static ArmorMaterial GoranTunicMaterial = EnumHelper.addArmorMaterial("GoranTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 	public static ArmorMaterial HeroTunicMaterial = EnumHelper.addArmorMaterial("HeroTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 	public static ArmorMaterial ZoraTunicMaterial = EnumHelper.addArmorMaterial("ZoraTunicMaterial", null, -1, new int[]{4, 5, 4, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
-													//TODO replace first 'null' with something like this maybe?: (RefStrings.MODID + ":textures/model/armor/" + getUnlocalizedName(stack).substring(5, 13))
+			//TODO replace first 'null' with something like this maybe?: (RefStrings.MODID + ":textures/model/armor/" + getUnlocalizedName(stack).substring(5, 13))
 
+	public static void initializeItems(){
+	
 	//Miscellaneous
 	//new MItem("itemName");
+		
+		new MItem("Ag");
 	
-	public static Item MasterSword;
-	public static Item MasterIngot;
-	public static Item NewMasterSword;
+	new MItem("MasterSword");
+	new MItem("MasterIngot");
+	new MItem("NewMasterSword");
 	
-	public static Item ChuJellyRed;
-	public static Item ChuJellyGreen;
-	public static Item ChuJellyBlue;
-	public static Item ChuJellyYellow;
-	public static Item ChuJellyPurple;
+	new MItem("ChuJellyRed");
+	new MItem("ChuJellyGreen");
+	new MItem("ChuJellyBlue");
+	new MItem("ChuJellyYellow");
+	new MItem("ChuJellyPurple");
 	
-	public static Item Rupee;
+	new Rupee("Rupee");
 
-	public static Item RockSteak;
+	new RockSteak(1, 1, false, "RockSteak");
 		
 	//Ingot
-	public static Item ShdwIngot;
-	public static Item AgIngot;
-	public static Item AgNugget;
-	public static Item CoalDust;
-	public static Item FeIngot;
-	public static Item HyrlIngot;
-	public static Item ShdwGem;
+	new MItem("ShdwIngot");
+	new MItem("AgIngot");
+	new MItem("AgNugget");
+	new MItem("CoalDust");
+	new MItem("FeIngot");
+	new MItem("HyrlIngot");
+	new MItem("ShdwGem");
 	
 	//Tools	
-	public static Item HyrlPick;
-	public static Item HyrlAxe;
-	public static Item HyrlSpade;
-	public static Item HyrlHoe;
-	public static Item HyrlSword;
+	new MItem("HyrlPick");
+	new MItem("HyrlAxe");
+	new MItem("HyrlSpade");
+	new MItem("HyrlHoe");
+	new MItem("HyrlSword");
 	
-	public static Item ShdwPick;
-	public static Item ShdwAxe;
-	public static Item ShdwSpade;
-	public static Item ShdwHoe;
-	public static Item ShdwSword;
+	new MItem("ShdwPick");
+	new MItem("ShdwAxe");
+	new MItem("ShdwSpade");
+	new MItem("ShdwHoe");
+	new MItem("ShdwSword");
 	
 	
 	//Armour	
 
-	public static Item HyrlNormHelm;
-	public static Item HyrlNormChest;
-	public static Item HyrlNormLegs;
-	public static Item HyrlNormBoots;
+	new MItem("HyrlNormHelm"/*, material, textureName, EntityEquipmentSlot.HEAD*/);
+	new MItem("HyrlNormChest");
+	new MItem("HyrlNormLegs");
+	new MItem("HyrlNormBoots");
 	
-	public static Item HyrlChanHelm;
-	public static Item HyrlChanChest;
-	public static Item HyrlChanLegs;
-	public static Item HyrlChanBoots;
+	new MItem("HyrlChanHelm");
+	new MItem("HyrlChanChest");
+	new MItem("HyrlChanLegs");
+	new MItem("HyrlChanBoots");
 	
-	public static Item ShdwNormHelm;
-	public static Item ShdwNormChest;
-	public static Item ShdwNormLegs;
-	public static Item ShdwNormBoots;
+	new MItem("ShdwNormHelm");
+	new MItem("ShdwNormChest");
+	new MItem("ShdwNormLegs");
+	new MItem("ShdwNormBoots");
 	
-	public static Item GoranTunicHelm;
-	public static Item GoranTunicChest;
-	public static Item GoranTunicLegs;
-	public static Item GoranTunicBoots;
+	new MItem("GoranTunicHelm");
+	new MItem("GoranTunicChest");
+	new MItem("GoranTunicLegs");
+	new MItem("GoranTunicBoots");
 	
-	public static Item HeroTunicHelm;
-	public static Item HeroTunicChest;
-	public static Item HeroTunicLegs;
-	public static Item HeroTunicBoots;
+	new MItem("HeroTunicHelm");
+	new MItem("HeroTunicChest");
+	new MItem("HeroTunicLegs");
+	new MItem("HeroTunicBoots");
 	
-	public static Item ZoraTunicHelm;
-	public static Item ZoraTunicChest;
-	public static Item ZoraTunicLegs;
-	public static Item ZoraTunicBoots;
+	new MItem("ZoraTunicHelm");
+	new MItem("ZoraTunicChest");
+	new MItem("ZoraTunicLegs");
+	new MItem("ZoraTunicBoots");
+	
+	}
 	
 	
-	public static void initializeItem(){
-		//Miscellaneous
-		MasterSword = new com.crafter6789.loztwiprincess.item.tools.MasterSword(MasterToolMaterial).setUnlocalizedName("MasterSword").setCreativeTab(MCreativeTabs.tabTool).setRegistryName("MasterSword")/*.setTextureName(RefStrings.MODID + ":MasterSword")*/;
-		NewMasterSword = new com.crafter6789.loztwiprincess.item.tools.NewMasterSword(NewMasterToolMaterial).setUnlocalizedName("NewMasterSword").setCreativeTab(MCreativeTabs.tabTool).setRegistryName("NewMasterSword")/*.setTextureName(RefStrings.MODID + ":NewMasterSword")*/;
+	//public static void initializeItem(){
+		/**
 		
-		ChuJellyRed = new Item().setRegistryName("ChuJellyRed").setUnlocalizedName("ChuJellyRed").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyRed")*/;
-		ChuJellyGreen = new Item().setRegistryName("ChuJellyGreen").setUnlocalizedName("ChuJellyGreen").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyGreen")*/;
-		ChuJellyBlue = new Item().setRegistryName("ChuJellyBlue").setUnlocalizedName("ChuJellyBlue").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyBlue")*/;
-		ChuJellyYellow = new Item().setRegistryName("ChuJellyYellow").setUnlocalizedName("ChuJellyYellow").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyYellow")*/;
-		ChuJellyPurple = new Item().setRegistryName("ChuJellyPurple").setUnlocalizedName("ChuJellyPurple").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyPurple")*/;
+		//Miscellaneous
+		MasterSword = new com.crafter6789.loztwiprincess.item.tools.MasterSword(MasterToolMaterial).setUnlocalizedName("MasterSword").setCreativeTab(MCreativeTabs.tabTool).setRegistryName("MasterSword")/*.setTextureName(RefStrings.MODID + ":MasterSword");
+		NewMasterSword = new com.crafter6789.loztwiprincess.item.tools.NewMasterSword(NewMasterToolMaterial).setUnlocalizedName("NewMasterSword").setCreativeTab(MCreativeTabs.tabTool).setRegistryName("NewMasterSword")/*.setTextureName(RefStrings.MODID + ":NewMasterSword");
+		
+		ChuJellyRed = new Item().setRegistryName("ChuJellyRed").setUnlocalizedName("ChuJellyRed").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyRed");
+		ChuJellyGreen = new Item().setRegistryName("ChuJellyGreen").setUnlocalizedName("ChuJellyGreen").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyGreen");
+		ChuJellyBlue = new Item().setRegistryName("ChuJellyBlue").setUnlocalizedName("ChuJellyBlue").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyBlue");
+		ChuJellyYellow = new Item().setRegistryName("ChuJellyYellow").setUnlocalizedName("ChuJellyYellow").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyYellow");
+		ChuJellyPurple = new Item().setRegistryName("ChuJellyPurple").setUnlocalizedName("ChuJellyPurple").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ChuJellyPurple");
 		
 		Rupee = new com.crafter6789.loztwiprincess.item.meta.Rupee("Rupee").setRegistryName("Rupee");
 		RockSteak = new com.crafter6789.loztwiprincess.item.RockSteak(1, 1, false, "RockSteak").setRegistryName("RockSteak");
 		
 		//Ingot
-		ShdwIngot = new Item().setRegistryName("ShdwIngot").setUnlocalizedName("ShdwIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ShdwIngot")*/;
-		AgIngot = new Item().setRegistryName("AgIngot").setUnlocalizedName("AgIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":SilverIngot")*/;
-		AgNugget = new Item().setRegistryName("AgNugget").setUnlocalizedName("AgNugget").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":SilverNugget")*/;
-		CoalDust = new Item().setRegistryName("CoalDust").setUnlocalizedName("CoalDust").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":CoalDust")*/;
-		FeIngot = new Item().setRegistryName("FeIngot").setUnlocalizedName("FeIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":FeIngot")*/;
-		HyrlIngot = new Item().setRegistryName("HyrlIngot").setUnlocalizedName("HyrlIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":HyrlIngot")*/;
-		ShdwGem = new Item().setRegistryName("ShdwGem").setUnlocalizedName("ShdwGem").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ShdwGem")*/;
-		MasterIngot = new Item().setRegistryName("MasterIngot").setUnlocalizedName("MasterIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":MasterIngot")*/;
+		ShdwIngot = new Item().setRegistryName("ShdwIngot").setUnlocalizedName("ShdwIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ShdwIngot");
+		AgIngot = new Item().setRegistryName("AgIngot").setUnlocalizedName("AgIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":SilverIngot");
+		AgNugget = new Item().setRegistryName("AgNugget").setUnlocalizedName("AgNugget").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":SilverNugget");
+		CoalDust = new Item().setRegistryName("CoalDust").setUnlocalizedName("CoalDust").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":CoalDust");
+		FeIngot = new Item().setRegistryName("FeIngot").setUnlocalizedName("FeIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":FeIngot");
+		HyrlIngot = new Item().setRegistryName("HyrlIngot").setUnlocalizedName("HyrlIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":HyrlIngot");
+		ShdwGem = new Item().setRegistryName("ShdwGem").setUnlocalizedName("ShdwGem").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":ShdwGem");
+		MasterIngot = new Item().setRegistryName("MasterIngot").setUnlocalizedName("MasterIngot").setCreativeTab(MCreativeTabs.tabItem)/*.setTextureName(RefStrings.MODID + ":MasterIngot");
 
 		//Tools
-		HyrlPick = new com.crafter6789.loztwiprincess.item.tools.HyrlPick(HyrlToolMaterial).setRegistryName("HyrlPick").setUnlocalizedName("HyrlPick").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlPick")*/;
-		HyrlAxe = new com.crafter6789.loztwiprincess.item.tools.HyrlAxe(HyrlToolMaterial).setRegistryName("HyrlAxe").setUnlocalizedName("HyrlAxe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlAxe")*/;
-		HyrlSpade = new com.crafter6789.loztwiprincess.item.tools.HyrlSpade(HyrlToolMaterial).setRegistryName("HyrlSpade").setUnlocalizedName("HyrlSpade").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlSpade")*/;
-		HyrlHoe = new com.crafter6789.loztwiprincess.item.tools.HyrlHoe(HyrlToolMaterial).setRegistryName("HyrlHoe").setUnlocalizedName("HyrlHoe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlHoe")*/;
-		HyrlSword = new com.crafter6789.loztwiprincess.item.tools.HyrlSword(HyrlToolMaterial).setRegistryName("HyrlSword").setUnlocalizedName("HyrlSword").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlSword")*/;
+		HyrlPick = new com.crafter6789.loztwiprincess.item.tools.HyrlPick(HyrlToolMaterial).setRegistryName("HyrlPick").setUnlocalizedName("HyrlPick").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlPick");
+		HyrlAxe = new com.crafter6789.loztwiprincess.item.tools.HyrlAxe(HyrlToolMaterial).setRegistryName("HyrlAxe").setUnlocalizedName("HyrlAxe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlAxe");
+		HyrlSpade = new com.crafter6789.loztwiprincess.item.tools.HyrlSpade(HyrlToolMaterial).setRegistryName("HyrlSpade").setUnlocalizedName("HyrlSpade").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlSpade");
+		HyrlHoe = new com.crafter6789.loztwiprincess.item.tools.HyrlHoe(HyrlToolMaterial).setRegistryName("HyrlHoe").setUnlocalizedName("HyrlHoe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlHoe");
+		HyrlSword = new com.crafter6789.loztwiprincess.item.tools.HyrlSword(HyrlToolMaterial).setRegistryName("HyrlSword").setUnlocalizedName("HyrlSword").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":HyrlSword");
 		
-		ShdwPick = new com.crafter6789.loztwiprincess.item.tools.ShdwPick(ShdwToolMaterial).setRegistryName("ShdwPick").setUnlocalizedName("ShdwPick").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwPick")*/;
-		ShdwAxe = new com.crafter6789.loztwiprincess.item.tools.ShdwAxe(ShdwToolMaterial).setRegistryName("ShdwAxe").setUnlocalizedName("ShdwAxe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwAxe")*/;
-		ShdwSpade = new com.crafter6789.loztwiprincess.item.tools.ShdwSpade(ShdwToolMaterial).setRegistryName("ShdwSpade").setUnlocalizedName("ShdwSpade").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwSpade")*/;
-		ShdwHoe = new com.crafter6789.loztwiprincess.item.tools.ShdwHoe(ShdwToolMaterial).setRegistryName("ShdwHoe").setUnlocalizedName("ShdwHoe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwHoe")*/;
-		ShdwSword = new com.crafter6789.loztwiprincess.item.tools.ShdwSword(ShdwToolMaterial).setRegistryName("ShdwSword").setUnlocalizedName("ShdwSword").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwSword")*/;
+		ShdwPick = new com.crafter6789.loztwiprincess.item.tools.ShdwPick(ShdwToolMaterial).setRegistryName("ShdwPick").setUnlocalizedName("ShdwPick").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwPick");
+		ShdwAxe = new com.crafter6789.loztwiprincess.item.tools.ShdwAxe(ShdwToolMaterial).setRegistryName("ShdwAxe").setUnlocalizedName("ShdwAxe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwAxe");
+		ShdwSpade = new com.crafter6789.loztwiprincess.item.tools.ShdwSpade(ShdwToolMaterial).setRegistryName("ShdwSpade").setUnlocalizedName("ShdwSpade").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwSpade");
+		ShdwHoe = new com.crafter6789.loztwiprincess.item.tools.ShdwHoe(ShdwToolMaterial).setRegistryName("ShdwHoe").setUnlocalizedName("ShdwHoe").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwHoe");
+		ShdwSword = new com.crafter6789.loztwiprincess.item.tools.ShdwSword(ShdwToolMaterial).setRegistryName("ShdwSword").setUnlocalizedName("ShdwSword").setCreativeTab(MCreativeTabs.tabTool)/*.setTextureName(RefStrings.MODID + ":ShdwSword");
 		
 		//Armour
 		
@@ -194,19 +195,19 @@ public class MItems {
 		ZoraTunicHelm = new com.crafter6789.loztwiprincess.item.MArmor("ZoraTunicHelm", ZoraTunicMaterial, "ZoraTunicHelm", EntityEquipmentSlot.HEAD).setRegistryName();
 		ZoraTunicChest = new com.crafter6789.loztwiprincess.item.MArmor("ZoraTunicChest", ZoraTunicMaterial, "ZoraTunicChest", EntityEquipmentSlot.CHEST).setRegistryName();
 		ZoraTunicLegs = new com.crafter6789.loztwiprincess.item.MArmor("ZoraTunicLegs", ZoraTunicMaterial, "ZoraTunicLegs", EntityEquipmentSlot.LEGS).setRegistryName();
-		ZoraTunicBoots = new com.crafter6789.loztwiprincess.item.MArmor("ZoraTunicBoots", ZoraTunicMaterial, "ZoraTunicBoots", EntityEquipmentSlot.FEET).setRegistryName();
+		ZoraTunicBoots = new com.crafter6789.loztwiprincess.item.MArmor("ZoraTunicBoots", ZoraTunicMaterial, "ZoraTunicBoots", EntityEquipmentSlot.FEET).setRegistryName();*/
 		
 		
-	}
+	//}
 
-	public static void registerItem(){
+	public static void registerItems(){
 		
-		/*for(Item item : ITEMS.values()){
+		for(Item item : ITEMS.values()){
 			GameRegistry.register(item);
-		}*/
+		}
 		
 		
-		
+		/**
 		//TODO GameRegistry.register(itemName[, resourceLocation]);
 		//Miscellaneous
 		GameRegistry.register(ChuJellyRed);
@@ -275,17 +276,26 @@ public class MItems {
 		GameRegistry.register(ZoraTunicChest);
 		GameRegistry.register(ZoraTunicLegs);
 		GameRegistry.register(ZoraTunicBoots);
-		
+		*/
 		
 		
 	}
 
-	public static void render() {
+	public static void renderItems() {
 		
-		/*for(Item item : ITEMS.values()){
-			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-		}*/
-		
+		for(Item item : ITEMS.values()){
+			if(item instanceof Rupee){
+				ModelLoader.setCustomModelResourceLocation(item, Rupee.maxnum, new ModelResourceLocation(item.getRegistryName(), "inventory"));				
+			}else if(item instanceof RockSteak){
+				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+			}else if(item instanceof MItem){
+				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+			}else if(item instanceof MArmor){
+				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+			}else{
+				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+			}
+		}
 	}
 	
 }

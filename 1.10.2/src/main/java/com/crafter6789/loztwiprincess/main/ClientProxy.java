@@ -18,7 +18,7 @@ import net.minecraft.client.model.ModelBase;
 
 public class ClientProxy extends ServerProxy{
 	public void registerRenderInfo(){
-		MItems.render();
+		MItems.renderItems();
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityChuRed.class, new RenderEntityChuRed(new ModelEntityChu(), 0F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityChuGreen.class, new RenderEntityChuGreen(new ModelEntityChu(), 0F));

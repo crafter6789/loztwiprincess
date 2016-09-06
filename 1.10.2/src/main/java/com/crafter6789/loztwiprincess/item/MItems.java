@@ -47,8 +47,6 @@ public class MItems {
 	
 	//Miscellaneous
 	//new MItem("itemName");
-		
-		new MItem("Ag");
 	
 	new MItem("MasterSword");
 	new MItem("MasterIngot");

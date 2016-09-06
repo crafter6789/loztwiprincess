@@ -35,7 +35,7 @@ public class MBlocksClass {
 	public static Block RPGrass;
 	public static Block RPGrassUsed;	
 	
-	public static Block TwiHyrulePortal;
+	//public static Block TwiHyrulePortal;
 	public static Block TwiHyrulePortalSupport;
 	
 	//public static Block BeechSapling;
@@ -67,7 +67,7 @@ public class MBlocksClass {
 		
 		//Portal
 		
-		TwiHyrulePortal = new TwiHyrulePortal();
+		//TwiHyrulePortal = new TwiHyrulePortal();
 		TwiHyrulePortalSupport = new MBlocksStone(Material.ROCK, 5.0f, 4.0f, "pickaxe", 0)/*.setBlockName("TwiHyrulePortalSupport")*/.setCreativeTab(MCreativeTabs.tabUtil)/*.setBlockTextureName(RefStrings.MODID + ":TwiHyrulePortalSupport")*/;
 			
 		//Woods
@@ -97,24 +97,24 @@ public class MBlocksClass {
 		GameRegistry.register(RPGrass);
 		GameRegistry.register(RPGrassUsed);
 		
-		GameRegistry.register(TwiHyrulePortal);
+		//GameRegistry.register(TwiHyrulePortal);
 		GameRegistry.register(TwiHyrulePortalSupport);
 		
-/**		GameRegistry.registerBlock(ShdwSteel, ShdwSteel.getUnlocalizedName());
-		GameRegistry.registerBlock(Ag, Ag.getUnlocalizedName());
-		GameRegistry.registerBlock(FeSteel, FeSteel.getUnlocalizedName());
-		GameRegistry.registerBlock(HyrlSteel, HyrlSteel.getUnlocalizedName());
-		GameRegistry.registerBlock(ShdwOre, ShdwOre.getUnlocalizedName());
-		GameRegistry.registerBlock(AgOre, AgOre.getUnlocalizedName());
-		GameRegistry.registerBlock(MasterOre, MasterOre.getUnlocalizedName());
-		GameRegistry.registerBlock(RupeeOre, RupeeOre.getUnlocalizedName());
-		GameRegistry.registerBlock(RPGrass, RPGrass.getUnlocalizedName());
-		GameRegistry.registerBlock(RPGrassUsed, RPGrassUsed.getUnlocalizedName());
-		GameRegistry.registerBlock(TwiHyrulePortal, TwiHyrulePortal.getUnlocalizedName());
-		GameRegistry.registerBlock(TwiHyrulePortalSupport, TwiHyrulePortalSupport.getUnlocalizedName());
-		//GameRegistry.registerBlock(BeechSapling, BeechSapling.getUnlocalizedName());
-		//GameRegistry.registerBlock(BeechLog, BeechLog.getUnlocalizedName());
-		//GameRegistry.registerBlock(BeechLeaves, BeechLeaves.getUnlocalizedName());
-		//GameRegistry.registerBlock(SwordStand, SwordStand.getUnlocalizedName());*/
+		GameRegistry.register(ShdwSteel);
+		GameRegistry.register(Ag);
+		GameRegistry.register(FeSteel);
+		GameRegistry.register(HyrlSteel);
+		GameRegistry.register(ShdwOre);
+		GameRegistry.register(AgOre);
+		GameRegistry.register(MasterOre);
+		GameRegistry.register(RupeeOre);
+		GameRegistry.register(RPGrass);
+		GameRegistry.register(RPGrassUsed);
+		//GameRegistry.register(TwiHyrulePortal);
+		GameRegistry.register(TwiHyrulePortalSupport);
+		//GameRegistry.register(BeechSapling);
+		//GameRegistry.register(BeechLog);
+		//GameRegistry.register(BeechLeaves);
+		//GameRegistry.register(SwordStand);
 	}
 }

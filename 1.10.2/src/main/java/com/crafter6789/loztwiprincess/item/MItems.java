@@ -194,74 +194,74 @@ public class MItems {
 
 	public static void registerItem(){
 		
-		//TODO GameRegistry.register(itemName, resourceLocation);
+		//TODO GameRegistry.register(itemName[, resourceLocation]);
 		//Miscellaneous
-		GameRegistry.registerItem(ChuJellyRed, ChuJellyRed.getUnlocalizedName());
-		GameRegistry.registerItem(ChuJellyGreen, ChuJellyGreen.getUnlocalizedName());
-		GameRegistry.registerItem(ChuJellyBlue, ChuJellyBlue.getUnlocalizedName());
-		GameRegistry.registerItem(ChuJellyYellow, ChuJellyYellow.getUnlocalizedName());
-		GameRegistry.registerItem(ChuJellyPurple, ChuJellyPurple.getUnlocalizedName());
+		GameRegistry.register(ChuJellyRed);
+		GameRegistry.register(ChuJellyGreen);
+		GameRegistry.register(ChuJellyBlue);
+		GameRegistry.register(ChuJellyYellow);
+		GameRegistry.register(ChuJellyPurple);
 
-		GameRegistry.registerItem(Rupee, Rupee.getUnlocalizedName());
-		GameRegistry.registerItem(RockSteak, RockSteak.getUnlocalizedName());
+		GameRegistry.register(Rupee);
+		GameRegistry.register(RockSteak);
 		
-		GameRegistry.registerItem(MasterIngot, MasterIngot.getUnlocalizedName());
-		GameRegistry.registerItem(MasterSword, MasterSword.getUnlocalizedName());
-		GameRegistry.registerItem(NewMasterSword, NewMasterSword.getUnlocalizedName());
+		GameRegistry.register(MasterIngot);
+		GameRegistry.register(MasterSword);
+		GameRegistry.register(NewMasterSword);
 		
 		//Ingot
-		GameRegistry.registerItem(ShdwIngot, ShdwIngot.getUnlocalizedName());
-		GameRegistry.registerItem(AgIngot, AgIngot.getUnlocalizedName());
-		GameRegistry.registerItem(AgNugget, AgNugget.getUnlocalizedName());
-		GameRegistry.registerItem(CoalDust, CoalDust.getUnlocalizedName());
-		GameRegistry.registerItem(FeIngot, FeIngot.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlIngot, HyrlIngot.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwGem, ShdwGem.getUnlocalizedName());
+		GameRegistry.register(ShdwIngot);
+		GameRegistry.register(AgIngot);
+		GameRegistry.register(AgNugget);
+		GameRegistry.register(CoalDust);
+		GameRegistry.register(FeIngot);
+		GameRegistry.register(HyrlIngot);
+		GameRegistry.register(ShdwGem);
 		
 		//Tools
-		GameRegistry.registerItem(HyrlPick, HyrlPick.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlAxe, HyrlAxe.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlSpade, HyrlSpade.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlHoe, HyrlHoe.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlSword, HyrlSword.getUnlocalizedName());
+		GameRegistry.register(HyrlPick);
+		GameRegistry.register(HyrlAxe);
+		GameRegistry.register(HyrlSpade);
+		GameRegistry.register(HyrlHoe);
+		GameRegistry.register(HyrlSword);
 		
-		GameRegistry.registerItem(ShdwPick, ShdwPick.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwAxe, ShdwAxe.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwSpade, ShdwSpade.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwHoe, ShdwHoe.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwSword, ShdwSword.getUnlocalizedName());
+		GameRegistry.register(ShdwPick);
+		GameRegistry.register(ShdwAxe);
+		GameRegistry.register(ShdwSpade);
+		GameRegistry.register(ShdwHoe);
+		GameRegistry.register(ShdwSword);
 		
 		//Armour
 		
-		GameRegistry.registerItem(HyrlNormHelm, HyrlNormHelm.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlNormChest, HyrlNormChest.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlNormLegs, HyrlNormLegs.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlNormBoots, HyrlNormBoots.getUnlocalizedName());	
+		GameRegistry.register(HyrlNormHelm);
+		GameRegistry.register(HyrlNormChest);
+		GameRegistry.register(HyrlNormLegs);
+		GameRegistry.register(HyrlNormBoots);	
 		
-		GameRegistry.registerItem(HyrlChanHelm, HyrlChanHelm.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlChanChest, HyrlChanChest.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlChanLegs, HyrlChanLegs.getUnlocalizedName());
-		GameRegistry.registerItem(HyrlChanBoots, HyrlChanBoots.getUnlocalizedName());
+		GameRegistry.register(HyrlChanHelm);
+		GameRegistry.register(HyrlChanChest);
+		GameRegistry.register(HyrlChanLegs);
+		GameRegistry.register(HyrlChanBoots);
 
-		GameRegistry.registerItem(ShdwNormHelm, ShdwNormHelm.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwNormChest, ShdwNormChest.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwNormLegs, ShdwNormLegs.getUnlocalizedName());
-		GameRegistry.registerItem(ShdwNormBoots, ShdwNormBoots.getUnlocalizedName());
+		GameRegistry.register(ShdwNormHelm);
+		GameRegistry.register(ShdwNormChest);
+		GameRegistry.register(ShdwNormLegs);
+		GameRegistry.register(ShdwNormBoots);
 
-		GameRegistry.registerItem(GoranTunicHelm, GoranTunicHelm.getUnlocalizedName());
-		GameRegistry.registerItem(GoranTunicChest, GoranTunicChest.getUnlocalizedName());
-		GameRegistry.registerItem(GoranTunicLegs, GoranTunicLegs.getUnlocalizedName());
-		GameRegistry.registerItem(GoranTunicBoots, GoranTunicBoots.getUnlocalizedName());
+		GameRegistry.register(GoranTunicHelm);
+		GameRegistry.register(GoranTunicChest);
+		GameRegistry.register(GoranTunicLegs);
+		GameRegistry.register(GoranTunicBoots);
 
-		GameRegistry.registerItem(HeroTunicHelm, HeroTunicHelm.getUnlocalizedName());
-		GameRegistry.registerItem(HeroTunicChest, HeroTunicChest.getUnlocalizedName());
-		GameRegistry.registerItem(HeroTunicLegs, HeroTunicLegs.getUnlocalizedName());
-		GameRegistry.registerItem(HeroTunicBoots, HeroTunicBoots.getUnlocalizedName());
+		GameRegistry.register(HeroTunicHelm);
+		GameRegistry.register(HeroTunicChest);
+		GameRegistry.register(HeroTunicLegs);
+		GameRegistry.register(HeroTunicBoots);
 
-		GameRegistry.registerItem(ZoraTunicHelm, ZoraTunicHelm.getUnlocalizedName());
-		GameRegistry.registerItem(ZoraTunicChest, ZoraTunicChest.getUnlocalizedName());
-		GameRegistry.registerItem(ZoraTunicLegs, ZoraTunicLegs.getUnlocalizedName());
-		GameRegistry.registerItem(ZoraTunicBoots, ZoraTunicBoots.getUnlocalizedName());
+		GameRegistry.register(ZoraTunicHelm);
+		GameRegistry.register(ZoraTunicChest);
+		GameRegistry.register(ZoraTunicLegs);
+		GameRegistry.register(ZoraTunicBoots);
 		
 		
 		

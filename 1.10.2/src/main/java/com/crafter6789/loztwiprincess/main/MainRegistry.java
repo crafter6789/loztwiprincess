@@ -36,7 +36,7 @@ public class MainRegistry {
 	@EventHandler
 	public static void PreLoad(FMLPreInitializationEvent PreEvent){
 
-		DimensionRegistry.mainRegistry();
+		//DimensionRegistry.mainRegistry();
 		
 		MCreativeTabs.initializeTabs();
 		MItems.mainRegistry();
@@ -44,7 +44,7 @@ public class MainRegistry {
 		MWorld.mainRegistry();
 		CraftingManager.mainRegistry();
 		MEntitiesClass.mainRegistry();
-		BiomeRegistry.mainRegistry();
+		//BiomeRegistry.mainRegistry();
 
 		
 		proxy.registerTileEntities();

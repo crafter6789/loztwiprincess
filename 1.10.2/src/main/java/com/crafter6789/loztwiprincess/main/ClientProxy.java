@@ -24,7 +24,7 @@ public class ClientProxy extends ServerProxy{
 		RenderingRegistry.registerEntityRenderingHandler(EntityChuPurple.class, new RenderEntityChuPurple(new ModelEntityChu(), 0F));
 	}
 	
-	public int addArmor(String armor){
+	/*public int addArmor(String armor){
 		return RenderingRegistry.addNewArmourRendererPrefix(armor);
-	}
+	}*/
 }

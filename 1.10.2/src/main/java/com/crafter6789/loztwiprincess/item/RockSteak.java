@@ -1,10 +1,7 @@
 package com.crafter6789.loztwiprincess.item;
 
-import com.crafter6789.loztwiprincess.lib.RefStrings;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -23,6 +20,7 @@ public class RockSteak extends ItemFood {
 		//this.setTextureName(RefStrings.MODID + ":RockSteak");
 		
 	}
+	@SuppressWarnings("unused")
 	protected void onFoodEaten(ItemStack p_77849_1_, World p_77849_2_, EntityPlayer p_77849_3_)
     {
 	//boolean flag = (p_77849_3_.inventory.armorItemInSlot(1) == new ItemStack(MItems.GoranTunicHelm) || p_77849_3_.inventory.armorItemInSlot(1) == new ItemStack(MItems.GoranTunicChest) || p_77849_3_.inventory.armorItemInSlot(2) == new ItemStack(MItems.GoranTunicLegs) || p_77849_3_.inventory.armorItemInSlot(3) == new ItemStack(MItems.GoranTunicBoots));

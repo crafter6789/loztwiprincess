@@ -4,18 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.crafter6789.loztwiprincess.blocks.MBlockBush;
-import com.crafter6789.loztwiprincess.blocks.MBlocksClass;
+import com.crafter6789.loztwiprincess.blocks.MBlocks;
 import com.crafter6789.loztwiprincess.item.MItems;
-import com.crafter6789.loztwiprincess.lib.RefStrings;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockBush;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -42,11 +36,11 @@ public class RPGrass extends MBlockBush {
     
     public void onBlockDestroyedByPlayer(World world,/*, int x, int y, int z*/BlockPos position, int m) {
     	if (world.getClosestPlayer(position.getX(), position.getY(), position.getZ(), 10, false).inventory.getCurrentItem() == null){
-    		world.setBlockState(position, MBlocksClass.RPGrass.getDefaultState());
+    		world.setBlockState(position, MBlocks.RPGrass.getDefaultState());
     	}else if (world.getClosestPlayer(position.getX(), position.getY(), position.getZ(), 10, false).inventory.getCurrentItem().getItem() instanceof ItemSword){
-    		world.setBlockState(position, MBlocksClass.RPGrassUsed.getDefaultState());
+    		world.setBlockState(position, MBlocks.RPGrassUsed.getDefaultState());
     	}else{
-    		world.setBlockState(position, MBlocksClass.RPGrass.getDefaultState());
+    		world.setBlockState(position, MBlocks.RPGrass.getDefaultState());
     	}
     }
     

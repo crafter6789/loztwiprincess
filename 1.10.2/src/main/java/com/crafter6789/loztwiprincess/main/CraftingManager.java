@@ -1,7 +1,7 @@
 
 package com.crafter6789.loztwiprincess.main;
 
-import com.crafter6789.loztwiprincess.blocks.MBlocksClass;
+import com.crafter6789.loztwiprincess.blocks.MBlocks;
 import com.crafter6789.loztwiprincess.item.MItems;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -57,18 +57,18 @@ public class CraftingManager {
 		
 		
 		//1->9 in Square
-		GameRegistry.addRecipe(new ItemStack(MBlocksClass.ShdwSteel, 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("ShdwIngot")});
-		GameRegistry.addRecipe(new ItemStack(MBlocksClass.Ag, 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("AgIngot")});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.BLOCKS.get("ShdwSteel"), 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("ShdwIngot")});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.BLOCKS.get("Ag"), 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("AgIngot")});
 		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("AgIngot"), 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("AgNugget")});
-		GameRegistry.addRecipe(new ItemStack(MBlocksClass.FeSteel, 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("FeIngot")});
-		GameRegistry.addRecipe(new ItemStack(MBlocksClass.HyrlSteel, 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("HyrlIngot")});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.BLOCKS.get("FeSteel"), 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("FeIngot")});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.BLOCKS.get("HyrlSteel"), 1), new Object[]{"XXX","XXX","XXX", 'X', MItems.ITEMS.get("HyrlIngot")});
 
 		//9->1 in Square
-		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("ShdwIngot"), 9), new Object[]{"X", 'X', MBlocksClass.ShdwSteel});
-		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("AgIngot"), 9), new Object[]{"X", 'X', MBlocksClass.Ag});
+		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("ShdwIngot"), 9), new Object[]{"X", 'X', MBlocks.BLOCKS.get("ShdwSteel")});
+		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("AgIngot"), 9), new Object[]{"X", 'X', MBlocks.BLOCKS.get("Ag")});
 		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("AgNugget"), 9), new Object[]{"X", 'X', MItems.ITEMS.get("AgIngot")});
-		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("FeIngot"), 9), new Object[]{"X", 'X', MBlocksClass.FeSteel});
-		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("HyrlIngot"), 9), new Object[]{"X", 'X', MBlocksClass.HyrlSteel});
+		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("FeIngot"), 9), new Object[]{"X", 'X', MBlocks.BLOCKS.get("FeSteel")});
+		GameRegistry.addRecipe(new ItemStack(MItems.ITEMS.get("HyrlIngot"), 9), new Object[]{"X", 'X', MBlocks.BLOCKS.get("HyrlSteel")});
 
 		
 		//Miscellaneous Splitting or Combining
@@ -82,7 +82,7 @@ public class CraftingManager {
 		
 	}
 	public static void addSmeltingRec(){
-		GameRegistry.addSmelting(MBlocksClass.AgOre, new ItemStack(MItems.ITEMS.get("AgIngot"), 1), 20.0f);
+		GameRegistry.addSmelting(MBlocks.BLOCKS.get("AgOre"), new ItemStack(MItems.ITEMS.get("AgIngot"), 1), 20.0f);
 		//GameRegistry.addSmelting(MBlocksClass.MasterOre, new ItemStack(MItems.ITEMS.get("MasterIngot"), 1), 20.0f);
 		GameRegistry.addSmelting(Blocks.STONE,  new ItemStack(MItems.ITEMS.get("RockSteak"), 1), 10.0f);
 	}

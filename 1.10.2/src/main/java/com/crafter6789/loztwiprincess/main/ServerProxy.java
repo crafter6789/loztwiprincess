@@ -1,19 +1,28 @@
 package com.crafter6789.loztwiprincess.main;
 
-import com.crafter6789.loztwiprincess.lib.RefStrings;
-
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ServerProxy {
-	public void registerRenderInfo(){
+	
+	public void preInit(FMLPreInitializationEvent PreEvent){
 		
 	}
+	
+	public void init(FMLInitializationEvent Event){
+		
+	}
+	
+	public void postInit(FMLPostInitializationEvent PostEvent){
+		
+	}
+	
+	public void registerRenderInfo(){}
 	
 	public void registerTileEntities(){
 
 	}
 	
-	public int addArmor(String armor){
-		return 0;
-	}
+	public int addArmor(String armor){return 0;}
 }

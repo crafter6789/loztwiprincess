@@ -36,7 +36,7 @@ public class MBlockBush extends MBlock implements net.minecraftforge.common.IPla
 
     protected MBlockBush(String name, Material material, MapColor mapColorIn, float hard, AxisAlignedBB box)
     {
-        super (name, material, SoundType.PLANT, hard, 0.0F, "all", 0);
+        super (name, material, SoundType.PLANT, hard, 0.0F, null, 0);
         this.blockSoundType = SoundType.PLANT;
         this.setCreativeTab(CreativeTabs.DECORATIONS);
         if (box != null){
@@ -121,7 +121,7 @@ public class MBlockBush extends MBlock implements net.minecraftforge.common.IPla
     @Override
     public net.minecraftforge.common.EnumPlantType getPlantType(net.minecraft.world.IBlockAccess world, BlockPos pos)
     {
-        if (this == MBlocksClass.RPGrass)          return net.minecraftforge.common.EnumPlantType.Plains;
+        if (this == MBlocks.RPGrass)          return net.minecraftforge.common.EnumPlantType.Plains;
         /**if (this == MBlocks.CARROTS)        return net.minecraftforge.common.EnumPlantType.Crop;
         if (this == MBlocks.POTATOES)       return net.minecraftforge.common.EnumPlantType.Crop;
         if (this == MBlocks.MELON_STEM)     return net.minecraftforge.common.EnumPlantType.Crop;

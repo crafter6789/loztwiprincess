@@ -6,13 +6,11 @@ import com.crafter6789.loztwiprincess.entity.mob.EntityChuPurple;
 import com.crafter6789.loztwiprincess.entity.mob.EntityChuRed;
 import com.crafter6789.loztwiprincess.entity.mob.EntityChuYellow;
 import com.crafter6789.loztwiprincess.main.MainRegistry;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
-import net.minecraft.entity.EntityList;
+
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeCache;
-import net.minecraftforge.fml.common.registry.EntityRegistry.EntityRegistration;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class MEntitiesClass {
 	
@@ -31,7 +29,7 @@ public class MEntitiesClass {
 		
 	}
 
-	public static void createEntity(int Id, Class entityClass, String entityName, int solidColor, int spotColor) {
+	public static void createEntity(int Id, Class<? extends EntityLiving> entityClass, String entityName, int solidColor, int spotColor) {
 		//int Id = EntityRegistry.findGlobalUniqueEntityId();
 		//EntityRegistry.registerGlobalEntityID(entityClass, entityName, Id);
 		EntityRegistry.registerModEntity(entityClass, entityName, Id, MainRegistry.modInstance, 16, 1, true);

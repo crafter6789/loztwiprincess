@@ -1,6 +1,6 @@
 package com.crafter6789.loztwiprincess.creativeTabs;
 
-import com.crafter6789.loztwiprincess.blocks.MBlocksClass;
+import com.crafter6789.loztwiprincess.blocks.MBlocks;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -13,7 +13,7 @@ public class CreativeTabBlock extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return Item.getItemFromBlock(MBlocksClass.ShdwOre);
+		return Item.getItemFromBlock(MBlocks.BLOCKS.get("ShdwOre"));
 	}
 
 }

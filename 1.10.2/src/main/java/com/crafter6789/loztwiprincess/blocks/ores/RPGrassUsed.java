@@ -3,7 +3,7 @@ package com.crafter6789.loztwiprincess.blocks.ores;
 import java.util.Random;
 
 import com.crafter6789.loztwiprincess.blocks.MBlockBush;
-import com.crafter6789.loztwiprincess.blocks.MBlocksClass;
+import com.crafter6789.loztwiprincess.blocks.MBlocks;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -30,7 +30,7 @@ public class RPGrassUsed extends MBlockBush {
 	public void updateTick(World world, BlockPos pos, IBlockState state, Random random){
 		int chance = world.rand.nextInt(8);
 		if (chance == 0) {
-			world.setBlockState(pos, MBlocksClass.RPGrass.getDefaultState());
+			world.setBlockState(pos, MBlocks.RPGrass.getDefaultState());
 		}
 	}
 	

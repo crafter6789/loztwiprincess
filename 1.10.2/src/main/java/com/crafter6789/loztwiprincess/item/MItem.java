@@ -1,7 +1,6 @@
 package com.crafter6789.loztwiprincess.item;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MItem extends Item {
 

@@ -3,12 +3,10 @@ package com.crafter6789.loztwiprincess.item;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.crafter6789.loztwiprincess.creativeTabs.MCreativeTabs;
 import com.crafter6789.loztwiprincess.item.meta.Rupee;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
